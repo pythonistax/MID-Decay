@@ -22,7 +22,7 @@ def run_for_date(playwright: Playwright, date_str: str, loop_count: int) -> None
         page.get_by_placeholder("email").click()
         page.get_by_placeholder("email").fill("team123@team123proton.com")
         page.get_by_placeholder("password").click()
-        page.get_by_placeholder("password").fill("GFTeam123!@")
+        page.get_by_placeholder("password").fill("j8R@C#@!@35QE7^Tn8")
         page.get_by_role("button", name="Login").click()
 
         # Go directly to the report page
