@@ -26,7 +26,7 @@ def run_for_date(playwright: Playwright, date_str: str, loop_count: int) -> None
         page.get_by_role("button", name="Login").click()
 
         # Go directly to the report page
-        page.goto("https://goldie.vrio.app/report/run/109/14", wait_until="networkidle")
+        page.goto("https://goldie.vrio.app/report/run/139", wait_until="networkidle")
         
         # Set date range for single day (same date on both ends)
         date_range = f"{date_str} - {date_str}"
@@ -63,11 +63,6 @@ def run_for_date(playwright: Playwright, date_str: str, loop_count: int) -> None
         page.get_by_role("textbox", name="Select Next Dimension").click()
         page.get_by_role("searchbox").fill("bin")
         page.get_by_role("option", name="Card Bin Number", exact=True).click()
-        
-        # Add Ship State dimension
-        page.get_by_role("link", name="Add Dimension").click()
-        page.get_by_role("textbox", name="Select Next Dimension").click()
-        page.get_by_role("option", name="Ship State").click()
         
         # Export the report
         page.get_by_role("link", name="Add Dimension").click()
